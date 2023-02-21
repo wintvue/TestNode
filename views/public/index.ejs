@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>KTP Checker</title>
+    <link rel="stylesheet" href="./css/index.css" >
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>KTP Validation Checker</h1>
+            <p>Input KTP Ids</p>
+            <form class="form" method="post" action="/ktp/submitForm">
+                <div class="input-container">
+                    <textarea class="inputKtp" type="text" id="ktp" name="ktp" required rows="10" cols="70">
+                    </textarea>
+                </div>
+                <div>
+                    <input class="button" id="buttonSubmit" type="submit" value="Temukan KTP Pelanggar">
+                </div>
+            </form>
+        </div>
+        <% if(data.length > 0){%>  
+            <p><%= data.join(", ") %></p>
+        <% 
+        } %>    
+
+    </body>
+</html>
