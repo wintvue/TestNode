@@ -8,7 +8,6 @@ const ktpRouter = express.Router();
 
 const path = require('path');
 
-// ktpRouter.get('/');
 ktpRouter.use(express.static(path.join(__dirname, '..', '..', '..', 'views','public')));
 
 ktpRouter.get('/', (req, res) => {

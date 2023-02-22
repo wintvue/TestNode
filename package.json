@@ -4,8 +4,10 @@
   "description": "��#\u0000 \u0000T\u0000e\u0000s\u0000t\u0000N\u0000o\u0000d\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon src/server.js"
+    "test": "jest",
+    "watch": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "cluster": "pm2 start src/server.js -i max"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
     "http": "^0.0.1-security",
     "nodemon": "^2.0.20",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
   }
 }

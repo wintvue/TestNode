@@ -1,7 +1,3 @@
-
-let alert = require('alert'); 
-const path = require('path');
-
 async function httpValidateKTP(req, res) {
     const ktp = req.body.ktp;
     if (ktp.length !== 0) {
@@ -27,5 +23,6 @@ async function temukanPelanggar(ids) {
 }
 
 module.exports = {
-     httpValidateKTP
+     httpValidateKTP,
+     temukanPelanggar
 }
